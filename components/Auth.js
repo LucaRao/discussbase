@@ -25,7 +25,7 @@ export default function Auth() {
             setLoadingSignUp(true)
             const { error } = await supabase.auth.signUp({ email , password })
             if (error) throw error
-            // alert('注册成功，直接帮你登录！')
+            alert('注册成功,请去邮箱登录！')
         } catch (error) {
             alert(error.error_description || error.message)
         } finally {
